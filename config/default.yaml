@@ -1,0 +1,49 @@
+# Aegis-Inspector AEI-1 Default Configuration
+
+# Vision analysis
+vision:
+  img_size: [224, 224]
+  confidence_threshold: 0.6
+  device: "auto"  # auto, cuda, cpu
+  model_path: "models/defect_detector.pt"
+
+# Acoustic analysis
+acoustic:
+  sample_rate: 44100
+  n_fft: 2048
+  hop_length: 512
+  mel_bands: 128
+  mfcc_coeffs: 20
+  distance_threshold: 0.35
+  min_freq_hz: 100
+  max_freq_hz: 5000
+
+# SLAM navigation
+slam:
+  camera_calibration: "config/camera_calib.json"
+  feature_detector: "ORB"
+  min_matches: 10
+  ransac_threshold: 1.0
+
+# Mission planning
+mission:
+  default_step_m: 0.1
+  default_altitude_m: 2.0
+  scan_speed_mps: 0.5
+
+# Drone interface
+drone:
+  type: "px4"  # px4, ardupilot, dji
+  connection: "udp://:14550"
+  timeout_sec: 30
+
+# Digital twin
+digital_twin:
+  db_path: "digital_twin_db.json"
+  health_decay_factor: 0.95
+
+# Report
+report:
+  output_format: "html"
+  include_heatmap: true
+  include_raw_data: false
