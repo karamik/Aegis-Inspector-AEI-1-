@@ -1,0 +1,47 @@
+# Aegis-Inspector AEI-1 Python dependencies
+# Autonomous drone inspection system
+
+# Core
+numpy>=1.24.0
+scipy>=1.10.0
+
+# Vision
+opencv-python>=4.8.0
+Pillow>=10.0.0
+torch>=2.0.0
+torchvision>=0.15.0
+
+# Acoustic
+librosa>=0.10.0
+soundfile>=0.12.0
+pydub>=0.25.0
+python_speech_features>=0.6
+
+# SLAM and Navigation
+opencv-contrib-python>=4.8.0
+numpy-quaternion>=2022.4.3
+
+# Drone SDK (optional)
+# dji-sdk>=4.0  # Uncomment if using DJI drones
+# pymavlink>=2.4.0  # For PX4/ArduPilot
+
+# Communication
+pyserial>=3.5
+zerorpc>=1.10.0
+
+# Web interface
+flask>=2.3.0
+flask-socketio>=5.3.0
+jinja2>=3.1.0
+
+# Utilities
+pyyaml>=6.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+tqdm>=4.65.0
+
+# Cryptography (for signed reports)
+cryptography>=41.0.0
+
+# Logging
+loguru>=0.7.0
